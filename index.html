@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.40/Tone.js"></script>
+    <title>FX Chain with Tuner</title>
+</head>
+<body>
+  <h1>FX Chain with Tuner</h1>
+  <div class="audio-container">
+    <!-- input meter -->
+    <div class="meter-container">
+      <div class="sidebar" id="sidebar">
+        <div class="meter" id="input-meter"></div>
+      </div>
+      <label for="input-db-value">INPUT</label>
+      <span id="input-db-value"></span>
+    </div>
+
+    <!-- global settings and amp -->
+    <div class="global-container" id="global-container">
+        <div class="amp-container" id="amp-container"></div>
+        <div class="power-container" id="power-container">
+            <div class="custom-select">
+            <label for="amp-type">Select Amp:</label>
+            <select id="amp-type">
+            <option value="" selected>Select Amp:</option>
+        </select>
+        </div>
+            </div>
+    </div>
+
+    <!-- output meter -->
+    <div class="meter-container">
+      <div class="sidebar" id="sidebar">
+        <div class="meter" id="output-meter"></div>
+      </div>
+      <label for="output-db-value">OUTPUT</label>
+      <span id="output-db-value"></span>
+    </div>
+  </div>
+    
+  <div class="module-container">
+    <!-- fx modules -->
+    <div class="fx-module" id="volume-module"></div>
+    <div class="fx-module" id="pitchshifter-module"></div>
+    <div class="fx-module" id="compressor-module"></div>
+    <div class="fx-module" id="autowah-module"></div>
+    <div class="fx-module" id="trebleboost-module"></div>
+    <div class="fx-module" id="distortion-module"></div>
+    <div class="fx-module" id="distortion-module-2"></div>
+    <div class="fx-module" id="bitcrusher-module"></div>
+    <div class="fx-module" id="chebydistortion-module"></div>
+    <div class="fx-module" id="fuzz-module"></div>
+    <div class="fx-module" id="chorus-module"></div>
+    <div class="fx-module" id="phaser-module"></div>
+    <div class="fx-module" id="tremolo-module"></div>
+    <div class="fx-module" id="vibrato-module"></div>
+    <div class="fx-module" id="delay-module"></div>
+    <div class="fx-module" id="pingpong-delay-module"></div>
+    <div class="fx-module" id="reverb-module"></div>
+    <div class="fx-module" id="jcreverb-module"></div>
+
+    <!-- <div class="fx-module" id="filter-module"></div> -->
+  </div>
+  
+</body>
+<script type="module" src="./assets/app.js"></script>
+</html>
