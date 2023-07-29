@@ -1,5 +1,6 @@
 // Import Modules
 import Meter from "./modules/audioModulesAndComponents/meterModule.js";
+import PitchDectectionModule from "./modules/audioModulesAndComponents/pitchDetectionModule.js";
 import { fxModules, fxButtons } from "./modules.js";
 
 // Audio Context Setup
@@ -50,6 +51,16 @@ async function main() {
   try {
     await audioSource.open();
     console.log("Audio source opened");
+
+    // Usage:
+    const pitchDetection = new PitchDectectionModule();
+
+    // To get the closest chromatic note value to an incoming audio source
+    // you can call the comparePitchToNote method like this:
+    const audioFrequency = 100.5; // Replace with the actual audio frequency value
+    const closestNote = pitchDetection.comparePitchToNote(audioFrequency);
+    console.log("Closest chromatic note value:", closestNote);
+
     // connect the audio source to the meter
     audioSource.connect(monoSignal);
     // default connection
